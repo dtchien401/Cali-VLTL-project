@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Dự án Vật lý trị liệu - Business Model</title>
+    <title>Dự án Vật lý trị liệu Cali - Enraf-Nonius</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
     <style>
@@ -27,6 +27,7 @@
                 transform: translateX(-50%);
             }
         }
+        .tech-card:hover { transform: translateY(-5px); transition: all 0.3s ease; }
     </style>
 </head>
 <body class="bg-slate-50 text-slate-800">
@@ -35,17 +36,20 @@
     <header class="gradient-bg text-white py-12 px-6 shadow-xl">
         <div class="max-w-6xl mx-auto flex flex-col md:flex-row justify-between items-center">
             <div class="text-center md:text-left">
-                <h1 class="text-3xl md:text-4xl font-bold mb-2 tracking-tight">Cali Physical Therapy Center</h1>
-                <p class="text-blue-200 text-lg">Hệ thống phục hồi chức năng & Trị liệu công nghệ cao</p>
+                <div class="flex items-center gap-3 mb-2 justify-center md:justify-start">
+                    <span class="bg-blue-500 text-[10px] uppercase px-2 py-1 rounded font-bold tracking-widest">Premium Equipment</span>
+                    <h1 class="text-3xl md:text-4xl font-bold tracking-tight">Cali Physical Therapy Center</h1>
+                </div>
+                <p class="text-blue-200 text-lg">Hệ thống trị liệu công nghệ cao Enraf-Nonius (Hà Lan)</p>
             </div>
             <div class="mt-6 md:mt-0 flex gap-4">
-                <div class="bg-white/10 p-3 rounded-lg text-center min-w-[120px]">
-                    <span class="block text-xs uppercase opacity-70">Tổng vốn đầu tư</span>
-                    <span class="text-xl font-bold">879M VND</span>
+                <div class="bg-white/10 p-3 rounded-lg text-center min-w-[120px] backdrop-blur-sm border border-white/20">
+                    <span class="block text-xs uppercase opacity-70">Tổng vốn Capex</span>
+                    <span class="text-xl font-bold">879,000,000</span>
                 </div>
-                <div class="bg-green-500/20 p-3 rounded-lg text-center min-w-[120px] border border-green-500/30">
+                <div class="bg-green-500/20 p-3 rounded-lg text-center min-w-[120px] border border-green-500/30 backdrop-blur-sm">
                     <span class="block text-xs uppercase opacity-70 font-bold text-green-300">Hoàn vốn (ROI)</span>
-                    <span class="text-xl font-bold text-green-400">9 Tháng</span>
+                    <span class="text-xl font-bold text-green-400">9.0 Tháng</span>
                 </div>
             </div>
         </div>
@@ -55,10 +59,10 @@
     <nav class="bg-white border-b sticky top-0 z-50 shadow-sm overflow-x-auto">
         <div class="max-w-6xl mx-auto flex whitespace-nowrap">
             <button onclick="switchTab('services')" id="btn-services" class="tab-active py-4 px-8 text-sm uppercase tracking-wider flex items-center gap-2">
-                <i class="fas fa-concierge-bell"></i> Dịch vụ & Quy trình
+                <i class="fas fa-concierge-bell"></i> Dịch vụ & Công nghệ
             </button>
             <button onclick="switchTab('business')" id="btn-business" class="py-4 px-8 text-sm uppercase tracking-wider text-slate-500 flex items-center gap-2">
-                <i class="fas fa-chart-line"></i> Mô hình kinh doanh (Capex)
+                <i class="fas fa-chart-line"></i> Tài chính chi tiết
             </button>
             <button onclick="switchTab('timeline')" id="btn-timeline" class="py-4 px-8 text-sm uppercase tracking-wider text-slate-500 flex items-center gap-2 border-b-4 border-transparent">
                 <i class="fas fa-calendar-alt"></i> Lộ trình triển khai
@@ -66,323 +70,315 @@
         </div>
     </nav>
 
-    <!-- Tab 1: Services Content -->
+    <!-- Tab 1: Services & Technology -->
     <main id="tab-services" class="max-w-6xl mx-auto py-10 px-6">
-        <!-- Overview Grid -->
-        <div class="grid md:grid-cols-3 gap-6 mb-12">
-            <div class="bg-white p-6 rounded-2xl shadow-sm border border-slate-100">
-                <div class="w-12 h-12 bg-blue-100 text-blue-600 rounded-xl flex items-center justify-center text-xl mb-4">
-                    <i class="fas fa-microchip"></i>
-                </div>
-                <h3 class="font-bold text-slate-900 mb-2">Công nghệ lõi</h3>
-                <p class="text-sm text-slate-500 leading-relaxed">CURAPULS 970, ENDOMED 482 và SONOPULS 490 được tích hợp trong mọi liệu trình.</p>
-            </div>
-            <div class="bg-white p-6 rounded-2xl shadow-sm border border-slate-100">
-                <div class="w-12 h-12 bg-green-100 text-green-600 rounded-xl flex items-center justify-center text-xl mb-4">
-                    <i class="fas fa-map-marker-alt"></i>
-                </div>
-                <h3 class="font-bold text-slate-900 mb-2">Địa điểm vận hành</h3>
-                <p class="text-sm text-slate-500 leading-relaxed">Triển khai tại 3 trung tâm chiến lược: TTC, TDU và VVO (Đang kiểm tra).</p>
-            </div>
-            <div class="bg-white p-6 rounded-2xl shadow-sm border border-slate-100">
-                <div class="w-12 h-12 bg-orange-100 text-orange-600 rounded-xl flex items-center justify-center text-xl mb-4">
-                    <i class="fas fa-user-check"></i>
-                </div>
-                <h3 class="font-bold text-slate-900 mb-2">Quy trình chuẩn</h3>
-                <p class="text-sm text-slate-500 leading-relaxed">Ký hợp đồng PT → Xác nhận vân tay → Trị liệu viên → Hoàn tất.</p>
-            </div>
-        </div>
-
-        <!-- Services Table -->
-        <div class="bg-white rounded-2xl shadow-sm border overflow-hidden">
-            <div class="p-6 border-b bg-slate-50">
-                <h2 class="text-xl font-bold">Danh mục gói dịch vụ đề nghị</h2>
-            </div>
+        <h2 class="text-2xl font-bold mb-8 text-slate-800 flex items-center gap-2">
+            <i class="fas fa-microchip text-blue-600"></i> Menu Dịch vụ & Thiết bị
+        </h2>
+        
+        <div class="bg-white rounded-2xl shadow-sm border overflow-hidden mb-10">
             <div class="overflow-x-auto">
-                <table class="w-full">
+                <table class="w-full text-sm">
                     <thead class="bg-slate-50 text-slate-400 text-xs uppercase font-bold">
                         <tr>
                             <th class="px-6 py-4 text-left">Gói dịch vụ</th>
-                            <th class="px-6 py-4 text-left">Thời lượng</th>
+                            <th class="px-6 py-4 text-left">Đối tượng</th>
+                            <th class="px-6 py-4 text-center">Thời lượng</th>
                             <th class="px-6 py-4 text-left">Quy trình thực hiện</th>
-                            <th class="px-6 py-4 text-right">Giá niêm yết</th>
-                        </tr>
-                    </thead>
-                    <tbody class="divide-y text-sm">
-                        <tr>
-                            <td class="px-6 py-6">
-                                <div class="font-bold text-blue-900">Quick Recovery</div>
-                                <div class="text-xs text-slate-500">Hội viên Gym, Đau cơ (DOMS)</div>
-                            </td>
-                            <td class="px-6 py-6 font-medium">30 phút</td>
-                            <td class="px-6 py-6 text-slate-600 italic font-light">ENDOMED 482 - Electrotherapy</td>
-                            <td class="px-6 py-6 text-right font-bold text-slate-900">690,000 VND</td>
-                        </tr>
-                        <tr>
-                            <td class="px-6 py-6">
-                                <div class="font-bold text-blue-900">Office Pain Relief</div>
-                                <div class="text-xs text-slate-500">Dân văn phòng, Đau vai gáy/Lưng</div>
-                            </td>
-                            <td class="px-6 py-6 font-medium">50 phút</td>
-                            <td class="px-6 py-6 text-slate-600 italic font-light">Endomed (30p) + Curapuls (20p)</td>
-                            <td class="px-6 py-6 text-right font-bold text-slate-900">890,000 VND</td>
-                        </tr>
-                        <tr>
-                            <td class="px-6 py-6">
-                                <div class="font-bold text-blue-900">Sports Injury Therapy</div>
-                                <div class="text-xs text-slate-500">Chấn thương Tennis/Runner/Gym</div>
-                            </td>
-                            <td class="px-6 py-6 font-medium">70 phút</td>
-                            <td class="px-6 py-6 text-slate-600 italic font-light">Stretch (30p) + Sonopuls (10p) + Endomed (30p)</td>
-                            <td class="px-6 py-6 text-right font-bold text-slate-900">1,290,000 VND</td>
-                        </tr>
-                        <tr>
-                            <td class="px-6 py-6">
-                                <div class="font-bold text-blue-900">Advance Athlete Recovery</div>
-                                <div class="text-xs text-slate-500">Member VIP, Tập cường độ cao</div>
-                            </td>
-                            <td class="px-6 py-6 font-medium">90 phút</td>
-                            <td class="px-6 py-6 text-slate-600 italic font-light">Full combo: Stretch + Sono + Endo + Cura</td>
-                            <td class="px-6 py-6 text-right font-bold text-slate-900">1,790,000 VND</td>
-                        </tr>
-                    </tbody>
-                </table>
-            </div>
-        </div>
-    </main>
-
-    <!-- Tab 2: Business Content -->
-    <main id="tab-business" class="max-w-6xl mx-auto py-10 px-6 hidden">
-        <!-- Capex Summary -->
-        <div class="grid md:grid-cols-2 gap-8 mb-12">
-            <div class="bg-white p-8 rounded-2xl shadow-sm border">
-                <h3 class="text-lg font-bold mb-6 flex items-center gap-2 text-slate-700">
-                    <i class="fas fa-wallet text-blue-600"></i> Tổng mức đầu tư (Capex)
-                </h3>
-                <div class="space-y-4">
-                    <div class="flex justify-between items-center pb-4 border-b">
-                        <span class="text-slate-500">Máy móc thiết bị (Equipment)</span>
-                        <span class="font-bold">659,000,000 VND</span>
-                    </div>
-                    <div class="flex justify-between items-center pb-4 border-b">
-                        <span class="text-slate-500">Cải tạo mặt bằng (Club renovation)</span>
-                        <span class="font-bold">220,000,000 VND</span>
-                    </div>
-                    <div class="flex justify-between items-center pt-2">
-                        <span class="font-bold text-slate-900 uppercase">Tổng cộng</span>
-                        <span class="text-2xl font-black text-blue-700">879,000,000 VND</span>
-                    </div>
-                    <div class="text-right text-xs text-slate-400">Tương đương ~ 33,170 USD</div>
-                </div>
-            </div>
-
-            <div class="bg-blue-900 text-white p-8 rounded-2xl shadow-lg relative overflow-hidden">
-                <div class="relative z-10">
-                    <h3 class="text-lg font-bold mb-4">Chỉ số tài chính chủ chốt</h3>
-                    <div class="grid grid-cols-2 gap-4 mt-6">
-                        <div class="bg-white/10 p-4 rounded-xl">
-                            <span class="block text-xs opacity-60">EBITDA Năm 1</span>
-                            <span class="text-xl font-bold">1.36 tỷ VND</span>
-                        </div>
-                        <div class="bg-white/10 p-4 rounded-xl">
-                            <span class="block text-xs opacity-60">Biên EBITDA</span>
-                            <span class="text-xl font-bold">49.0%</span>
-                        </div>
-                        <div class="bg-white/10 p-4 rounded-xl">
-                            <span class="block text-xs opacity-60">Thời gian hoàn vốn</span>
-                            <span class="text-xl font-bold text-yellow-400">9.0 Tháng</span>
-                        </div>
-                        <div class="bg-white/10 p-4 rounded-xl">
-                            <span class="block text-xs opacity-60">Free Cashflow Năm 1</span>
-                            <span class="text-xl font-bold">355M VND</span>
-                        </div>
-                    </div>
-                </div>
-                <div class="absolute -right-10 -bottom-10 opacity-10 text-9xl">
-                    <i class="fas fa-chart-bar"></i>
-                </div>
-            </div>
-        </div>
-
-        <!-- Yearly Projection Table -->
-        <div class="bg-white rounded-2xl shadow-sm border overflow-hidden">
-            <div class="p-6 border-b flex justify-between items-center">
-                <h2 class="text-xl font-bold">Kế hoạch tài chính 5 năm (VND)</h2>
-                <span class="text-xs bg-blue-50 text-blue-600 px-3 py-1 rounded-full font-bold">Dự báo tăng trưởng</span>
-            </div>
-            <div class="overflow-x-auto">
-                <table class="w-full text-sm text-center">
-                    <thead class="bg-slate-50 text-slate-500 font-bold uppercase text-xs">
-                        <tr>
-                            <th class="px-6 py-4 text-left">Chỉ số tài chính</th>
-                            <th class="px-6 py-4">Năm 1</th>
-                            <th class="px-6 py-4">Năm 2</th>
-                            <th class="px-6 py-4">Năm 3</th>
-                            <th class="px-6 py-4">Năm 4</th>
-                            <th class="px-6 py-4">Năm 5</th>
+                            <th class="px-6 py-4 text-right">Giá bán đề nghị</th>
                         </tr>
                     </thead>
                     <tbody class="divide-y">
-                        <tr class="bg-blue-50/30">
-                            <td class="px-6 py-4 text-left font-bold text-slate-700">CASH EBITDA</td>
-                            <td class="px-6 py-4 font-bold">1,367,247,636</td>
-                            <td class="px-6 py-4">969,415,283</td>
-                            <td class="px-6 py-4">935,424,420</td>
-                            <td class="px-6 py-4">935,424,420</td>
-                            <td class="px-6 py-4">935,424,420</td>
+                        <tr>
+                            <td class="px-6 py-4 font-bold text-blue-900">Quick Recovery</td>
+                            <td class="px-6 py-4 text-slate-500 text-xs">Hội viên gym, DOMS, giảm cân</td>
+                            <td class="px-6 py-4 text-center">30 phút</td>
+                            <td class="px-6 py-4 text-xs italic">Endomed 482</td>
+                            <td class="px-6 py-4 text-right font-bold">690,000</td>
                         </tr>
                         <tr>
-                            <td class="px-6 py-4 text-left font-medium text-slate-500 italic">Biên EBITDA (%)</td>
-                            <td class="px-6 py-4">49.0%</td>
-                            <td class="px-6 py-4">46.1%</td>
-                            <td class="px-6 py-4">46.0%</td>
-                            <td class="px-6 py-4">46.0%</td>
-                            <td class="px-6 py-4">46.0%</td>
+                            <td class="px-6 py-4 font-bold text-blue-900">Office Pain Relief</td>
+                            <td class="px-6 py-4 text-slate-500 text-xs">Dân văn phòng, Đau cổ vai gáy/lưng</td>
+                            <td class="px-6 py-4 text-center">50 phút</td>
+                            <td class="px-6 py-4 text-xs italic">Endomed 482 (30p) + Curapuls 970 (20p)</td>
+                            <td class="px-6 py-4 text-right font-bold">890,000</td>
                         </tr>
                         <tr>
-                            <td class="px-6 py-4 text-left font-medium text-slate-700">Free Cashflow</td>
-                            <td class="px-6 py-4 font-semibold text-green-600">355,747,636</td>
-                            <td class="px-6 py-4">969,415,283</td>
-                            <td class="px-6 py-4">935,424,420</td>
-                            <td class="px-6 py-4">935,424,420</td>
-                            <td class="px-6 py-4">935,424,420</td>
+                            <td class="px-6 py-4 font-bold text-blue-900">Sports Injury Therapy</td>
+                            <td class="px-6 py-4 text-slate-500 text-xs">Chấn thương gym, Runner, Đau gân</td>
+                            <td class="px-6 py-4 text-center">70 phút</td>
+                            <td class="px-6 py-4 text-xs italic">Stretching (30p) + Sonopuls (10p) + Endomed (30p)</td>
+                            <td class="px-6 py-4 text-right font-bold">1,290,000</td>
                         </tr>
-                        <tr class="text-xs text-slate-400">
-                            <td class="px-6 py-4 text-left italic">Capex Investment</td>
-                            <td class="px-6 py-4">879,000,000</td>
-                            <td class="px-6 py-4">-</td>
-                            <td class="px-6 py-4">-</td>
-                            <td class="px-6 py-4">-</td>
-                            <td class="px-6 py-4">-</td>
+                        <tr>
+                            <td class="px-6 py-4 font-bold text-blue-900">Advance Athlete Recovery</td>
+                            <td class="px-6 py-4 text-slate-500 text-xs">Member VIP, Athlete, Cường độ cao</td>
+                            <td class="px-6 py-4 text-center">90 phút</td>
+                            <td class="px-6 py-4 text-xs italic">Stretching (30p) + Sonopuls (10p) + Endomed (30p) + Curapuls (20p)</td>
+                            <td class="px-6 py-4 text-right font-bold">1,790,000</td>
                         </tr>
                     </tbody>
                 </table>
             </div>
-            <div class="p-4 bg-slate-50 text-xs text-slate-500 italic">
-                * EBITDA / Total Capital Commitment đạt 155.5% trong năm đầu tiên.
+        </div>
+    </main>
+
+    <!-- Tab 2: Financials (DETAILED) -->
+    <main id="tab-business" class="max-w-6xl mx-auto py-10 px-6 hidden">
+        
+        <!-- 1. Đầu tư ban đầu (Capex) -->
+        <div class="mb-12">
+            <h3 class="text-xl font-bold mb-6 flex items-center gap-2">
+                <i class="fas fa-wallet text-blue-600"></i> Phân bổ ngân sách đầu tư (Capex)
+            </h3>
+            <div class="grid md:grid-cols-3 gap-6">
+                <div class="bg-white p-6 rounded-2xl shadow-sm border border-slate-100">
+                    <div class="text-xs text-slate-400 uppercase font-bold mb-1">Thiết bị trị liệu</div>
+                    <div class="text-2xl font-bold text-slate-900">659,000,000</div>
+                    <p class="text-[11px] text-slate-500 mt-2">Dòng máy cao cấp Enraf-Nonius (Hà Lan) bao gồm Sóng ngắn, Điện xung, Siêu âm.</p>
+                </div>
+                <div class="bg-white p-6 rounded-2xl shadow-sm border border-slate-100">
+                    <div class="text-xs text-slate-400 uppercase font-bold mb-1">Cải tạo mặt bằng</div>
+                    <div class="text-2xl font-bold text-slate-900">220,000,000</div>
+                    <p class="text-[11px] text-slate-500 mt-2">Thi công phòng chức năng, nhận diện thương hiệu tại TTC, TDU, VVO.</p>
+                </div>
+                <div class="bg-blue-600 p-6 rounded-2xl shadow-lg text-white">
+                    <div class="text-xs opacity-80 uppercase font-bold mb-1">Tổng cộng đầu tư</div>
+                    <div class="text-2xl font-bold">879,000,000</div>
+                    <p class="text-[11px] opacity-80 mt-2">Toàn bộ vốn đầu tư ban đầu cho giai đoạn 1.</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- 2. Doanh thu & Chi phí vận hành -->
+        <div class="grid md:grid-cols-2 gap-8 mb-12">
+            <!-- Doanh thu dự kiến -->
+            <div class="bg-white rounded-2xl shadow-sm border border-slate-100 overflow-hidden">
+                <div class="p-4 bg-slate-50 border-b flex justify-between items-center">
+                    <h4 class="font-bold text-slate-700">Cơ cấu doanh thu (Tháng trung bình)</h4>
+                    <span class="text-[10px] font-bold text-blue-600">350 Sessions/tháng</span>
+                </div>
+                <div class="p-6 space-y-4">
+                    <div class="flex justify-between items-end border-b pb-3">
+                        <div>
+                            <span class="block text-sm font-semibold">Khách lẻ & Trải nghiệm</span>
+                            <span class="text-[10px] text-slate-400">~120 lượt x 890k</span>
+                        </div>
+                        <span class="font-bold text-slate-800">106,800,000</span>
+                    </div>
+                    <div class="flex justify-between items-end border-b pb-3">
+                        <div>
+                            <span class="block text-sm font-semibold">Gói liệu trình (Pack 10-20)</span>
+                            <span class="text-[10px] text-slate-400">Chuyển đổi từ hội viên PT</span>
+                        </div>
+                        <span class="font-bold text-slate-800">158,500,000</span>
+                    </div>
+                    <div class="flex justify-between items-end border-b pb-3">
+                        <div>
+                            <span class="block text-sm font-semibold">Bổ trợ & Cross-sell</span>
+                            <span class="text-[10px] text-slate-400">Sản phẩm đi kèm, Member VIP</span>
+                        </div>
+                        <span class="font-bold text-slate-800">14,700,000</span>
+                    </div>
+                    <div class="pt-2 flex justify-between">
+                        <span class="font-bold text-blue-900">TỔNG DOANH THU THỰC TẾ</span>
+                        <span class="font-bold text-blue-600">~280,000,000</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Chi phí OPEX -->
+            <div class="bg-white rounded-2xl shadow-sm border border-slate-100 overflow-hidden">
+                <div class="p-4 bg-slate-50 border-b">
+                    <h4 class="font-bold text-slate-700">Chi phí vận hành & Quản lý</h4>
+                </div>
+                <div class="p-6 space-y-4">
+                    <div class="flex justify-between items-center text-sm">
+                        <span class="text-slate-500">Lương nhân sự (Therapists)</span>
+                        <span class="font-medium">45,000,000</span>
+                    </div>
+                    <div class="flex justify-between items-center text-sm">
+                        <span class="text-slate-500">Marketing & Acquisition</span>
+                        <span class="font-medium">20,000,000</span>
+                    </div>
+                    <div class="flex justify-between items-center text-sm">
+                        <span class="text-slate-500">Vật tư & Điện nước</span>
+                        <span class="font-medium">15,000,000</span>
+                    </div>
+                    <div class="flex justify-between items-center text-sm">
+                        <span class="text-slate-500">Dự phòng phí</span>
+                        <span class="font-medium">10,000,000</span>
+                    </div>
+                    <div class="pt-6 border-t flex justify-between items-center">
+                        <div>
+                            <span class="block font-bold text-slate-800 text-lg">CASH EBITDA</span>
+                            <span class="text-[10px] text-green-600 font-bold uppercase tracking-widest">Biên lợi nhuận 49%</span>
+                        </div>
+                        <span class="text-2xl font-black text-green-600">~137M</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- 3. Bảng tổng kết 5 năm -->
+        <div class="bg-white rounded-2xl shadow-sm border border-slate-100 overflow-hidden">
+            <div class="p-6 border-b bg-slate-900 text-white flex justify-between items-center">
+                <h2 class="text-lg font-bold">Investment Summary (Bản chi tiết 5 năm)</h2>
+                <span class="text-xs bg-white/20 px-2 py-1 rounded">Đơn vị: VNĐ</span>
+            </div>
+            <div class="overflow-x-auto">
+                <table class="w-full text-sm">
+                    <thead class="bg-slate-50 text-slate-500 font-bold uppercase text-[10px]">
+                        <tr>
+                            <th class="px-6 py-4 text-left">Chỉ số tài chính</th>
+                            <th class="px-6 py-4 text-center">Năm 1</th>
+                            <th class="px-6 py-4 text-center">Năm 2</th>
+                            <th class="px-6 py-4 text-center">Năm 3</th>
+                            <th class="px-6 py-4 text-center">Năm 4</th>
+                            <th class="px-6 py-4 text-center">Năm 5</th>
+                        </tr>
+                    </thead>
+                    <tbody class="divide-y text-slate-700">
+                        <tr>
+                            <td class="px-6 py-4 font-semibold text-slate-900">Vốn cam kết (Capex)</td>
+                            <td class="px-6 py-4 text-center font-bold text-red-600">(879,000,000)</td>
+                            <td class="px-6 py-4 text-center text-slate-300">-</td>
+                            <td class="px-6 py-4 text-center text-slate-300">-</td>
+                            <td class="px-6 py-4 text-center text-slate-300">-</td>
+                            <td class="px-6 py-4 text-center text-slate-300">-</td>
+                        </tr>
+                        <tr>
+                            <td class="px-6 py-4">Chi phí Marketing / Branding</td>
+                            <td class="px-6 py-4 text-center text-orange-600">(132,500,000)</td>
+                            <td class="px-6 py-4 text-center text-slate-300">-</td>
+                            <td class="px-6 py-4 text-center text-slate-300">-</td>
+                            <td class="px-6 py-4 text-center text-slate-300">-</td>
+                            <td class="px-6 py-4 text-center text-slate-300">-</td>
+                        </tr>
+                        <tr class="bg-blue-50/50">
+                            <td class="px-6 py-4 font-bold text-blue-900 uppercase text-xs">CASH EBITDA (Lợi nhuận mặt bằng)</td>
+                            <td class="px-6 py-4 text-center font-bold text-blue-600">1,367,247,636</td>
+                            <td class="px-6 py-4 text-center font-bold text-blue-600">969,415,283</td>
+                            <td class="px-6 py-4 text-center font-bold text-blue-600">935,424,420</td>
+                            <td class="px-6 py-4 text-center font-bold text-blue-600">935,424,420</td>
+                            <td class="px-6 py-4 text-center font-bold text-blue-600">935,424,420</td>
+                        </tr>
+                        <tr class="bg-green-50 font-bold border-t-2 border-slate-200">
+                            <td class="px-6 py-4 text-green-700 uppercase text-xs">FREE CASHFLOW (Dòng tiền ròng)</td>
+                            <td class="px-6 py-4 text-center text-green-600">355,747,636</td>
+                            <td class="px-6 py-4 text-center text-green-600">969,415,283</td>
+                            <td class="px-6 py-4 text-center text-green-600">935,424,420</td>
+                            <td class="px-6 py-4 text-center text-green-600">935,424,420</td>
+                            <td class="px-6 py-4 text-center text-green-600">935,424,420</td>
+                        </tr>
+                        <tr class="text-[10px] text-slate-400 italic">
+                            <td class="px-6 py-3">EBITDA Margin</td>
+                            <td class="px-6 py-3 text-center">49.0%</td>
+                            <td class="px-6 py-3 text-center">46.1%</td>
+                            <td class="px-6 py-3 text-center">46.0%</td>
+                            <td class="px-6 py-3 text-center">46.0%</td>
+                            <td class="px-6 py-3 text-center">46.0%</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <div class="p-4 bg-slate-50 text-[10px] text-slate-400 text-center uppercase font-bold tracking-widest">
+                * Payback Period (Thời gian hoàn vốn): 9.0 Tháng dựa trên dòng tiền lũy kế.
             </div>
         </div>
     </main>
 
-    <!-- Tab 3: Timeline Content -->
+    <!-- Tab 3: Timeline (RESTORED VERSION) -->
     <main id="tab-timeline" class="max-w-6xl mx-auto py-10 px-6 hidden">
-        <div class="bg-white p-8 rounded-2xl shadow-sm border">
-            <h2 class="text-2xl font-bold mb-10 text-center text-slate-800">Lộ trình triển khai & Cột mốc</h2>
+        <div class="bg-white p-10 rounded-3xl shadow-sm border border-slate-100">
+            <h2 class="text-2xl font-bold mb-12 text-center text-slate-800">Lộ trình triển khai Dự án</h2>
             
-            <div class="relative timeline-container">
-                <!-- Node 1 -->
-                <div class="mb-12 flex flex-col md:flex-row items-center w-full">
+            <div class="relative timeline-container px-4 md:px-0">
+                <!-- Giai đoạn 1 -->
+                <div class="mb-16 flex flex-col md:flex-row items-center w-full">
                     <div class="hidden md:block flex-1 text-right pr-12">
-                        <span class="text-xs font-bold text-slate-400 uppercase tracking-widest">Giai đoạn 1</span>
+                        <span class="text-xs font-bold text-green-500 uppercase tracking-widest bg-green-50 px-3 py-1 rounded-full border border-green-100">Đã hoàn thành</span>
+                        <p class="text-sm text-slate-400 mt-2">14/03/2024</p>
                     </div>
-                    <div class="z-10 bg-slate-200 w-10 h-10 rounded-full flex items-center justify-center border-4 border-white shadow-sm text-slate-500">
+                    <div class="z-10 bg-green-500 w-12 h-12 rounded-full flex items-center justify-center border-4 border-white shadow-md text-white">
                         <i class="fas fa-check"></i>
                     </div>
-                    <div class="flex-1 pl-12 pt-2 md:pt-0">
-                        <h4 class="font-bold text-slate-700">Khảo sát & Lập kế hoạch</h4>
-                        <p class="text-sm text-slate-500">Hoàn thành khảo sát mặt bằng tại 3 CLB (TTC, TDU, VVO) và thống nhất danh mục máy Enraf-Nonius.</p>
+                    <div class="flex-1 pl-12 pt-4 md:pt-0">
+                        <h4 class="font-bold text-slate-800 text-lg">Xác nhận Mô hình Kinh doanh</h4>
+                        <p class="text-sm text-slate-500 mt-1">Hoàn tất danh mục 4 gói dịch vụ, giá bán đề nghị và quy trình vận hành phối hợp giữa PT & Therapist.</p>
                     </div>
                 </div>
 
-                <!-- Node 2: CURRENT FOCUS -->
-                <div class="mb-12 flex flex-col md:flex-row items-center w-full">
+                <!-- Giai đoạn 2 (CURRENT) -->
+                <div class="mb-16 flex flex-col md:flex-row items-center w-full">
                     <div class="hidden md:block flex-1 text-right pr-12">
-                        <span class="text-xs font-bold text-orange-500 uppercase tracking-widest">Hiện tại</span>
+                        <span class="text-xs font-bold text-orange-600 uppercase tracking-widest bg-orange-50 px-3 py-1 rounded-full border border-orange-100">Hành động ngay</span>
+                        <p class="text-sm text-slate-500 mt-2">Dự kiến: 17/03 - 19/03</p>
                     </div>
-                    <div class="z-10 bg-orange-500 w-10 h-10 rounded-full flex items-center justify-center border-4 border-white shadow-lg text-white ring-4 ring-orange-100">
-                        <i class="fas fa-clock"></i>
+                    <div class="z-10 bg-orange-500 w-12 h-12 rounded-full flex items-center justify-center border-4 border-white shadow-xl text-white ring-4 ring-orange-100 animate-pulse">
+                        <i class="fas fa-users"></i>
                     </div>
-                    <div class="flex-1 pl-12 pt-2 md:pt-0">
-                        <div class="bg-orange-50 p-4 rounded-xl border border-orange-100">
-                            <h4 class="font-bold text-orange-800">Họp với GĐ Bệnh viện (17-19/03)</h4>
-                            <p class="text-sm text-orange-700 mt-1 italic">Mục tiêu trọng tâm:</p>
-                            <ul class="text-sm text-slate-600 mt-2 space-y-2">
-                                <li class="flex gap-2">
-                                    <i class="fas fa-check-circle text-orange-500 mt-1"></i>
-                                    <span><strong>Clarify sản phẩm:</strong> Thống nhất chi tiết cấu hình và công năng các dòng máy trị liệu.</span>
+                    <div class="flex-1 pl-12 pt-4 md:pt-0">
+                        <div class="bg-orange-50/50 p-6 rounded-2xl border border-orange-100 shadow-sm">
+                            <h4 class="font-bold text-orange-900 text-lg">Họp Hội đồng GĐ Bệnh viện</h4>
+                            <p class="text-sm text-orange-800/80 mt-2 font-medium">Nội dung trọng tâm:</p>
+                            <ul class="mt-3 space-y-2">
+                                <li class="flex items-start gap-2 text-sm text-slate-700">
+                                    <i class="fas fa-caret-right mt-1 text-orange-500"></i>
+                                    <span>Ký kết thỏa thuận hợp tác chuyên môn & nhân sự therapist.</span>
                                 </li>
-                                <li class="flex gap-2">
-                                    <i class="fas fa-check-circle text-orange-500 mt-1"></i>
-                                    <span><strong>Dịch vụ Therapist:</strong> Xác định các gói kỹ thuật chuyên sâu mà Therapist BV có thể thực hiện tại trung tâm.</span>
+                                <li class="flex items-start gap-2 text-sm text-slate-700">
+                                    <i class="fas fa-caret-right mt-1 text-orange-500"></i>
+                                    <span>Chốt cấu hình thiết bị Enraf-Nonius & Duyệt ngân sách mua sắm (659tr).</span>
                                 </li>
                             </ul>
                         </div>
                     </div>
                 </div>
 
-                <!-- Node 3 -->
-                <div class="mb-12 flex flex-col md:flex-row items-center w-full">
+                <!-- Giai đoạn 3 -->
+                <div class="mb-16 flex flex-col md:flex-row items-center w-full">
                     <div class="hidden md:block flex-1 text-right pr-12">
-                        <span class="text-xs font-bold text-slate-400 uppercase tracking-widest">Giai đoạn 3</span>
+                        <span class="text-xs font-bold text-slate-400 uppercase tracking-widest">Kế hoạch</span>
                     </div>
-                    <div class="z-10 bg-white w-10 h-10 rounded-full flex items-center justify-center border-4 border-slate-200 shadow-sm text-slate-300">
-                        <i class="fas fa-file-contract"></i>
+                    <div class="z-10 bg-slate-200 w-12 h-12 rounded-full flex items-center justify-center border-4 border-white shadow-sm text-slate-400">
+                        <i class="fas fa-tools"></i>
                     </div>
-                    <div class="flex-1 pl-12 pt-2 md:pt-0">
-                        <h4 class="font-bold text-slate-700">Chốt Capex & Đặt hàng</h4>
-                        <p class="text-sm text-slate-500">Dự kiến Tuần 4/Tháng 3: Phê duyệt ngân sách đầu tư cuối cùng và tiến hành ký kết hợp đồng mua máy.</p>
+                    <div class="flex-1 pl-12 pt-4 md:pt-0">
+                        <h4 class="font-bold text-slate-700 text-lg">Setup & Đào tạo</h4>
+                        <p class="text-sm text-slate-500 mt-1">Cải tạo không gian tại TTC, TDU, VVO (220tr). Lắp đặt máy và đào tạo vận hành cho đội ngũ PT.</p>
                     </div>
                 </div>
 
-                <!-- Node 4 -->
-                <div class="mb-4 flex flex-col md:flex-row items-center w-full">
+                <!-- Giai đoạn 4 -->
+                <div class="flex flex-col md:flex-row items-center w-full">
                     <div class="hidden md:block flex-1 text-right pr-12">
-                        <span class="text-xs font-bold text-slate-400 uppercase tracking-widest">Giai đoạn 4</span>
+                        <span class="text-xs font-bold text-slate-400 uppercase tracking-widest">Vận hành</span>
                     </div>
-                    <div class="z-10 bg-white w-10 h-10 rounded-full flex items-center justify-center border-4 border-slate-200 shadow-sm text-slate-300">
+                    <div class="z-10 bg-slate-200 w-12 h-12 rounded-full flex items-center justify-center border-4 border-white shadow-sm text-slate-400">
                         <i class="fas fa-rocket"></i>
                     </div>
-                    <div class="flex-1 pl-12 pt-2 md:pt-0">
-                        <h4 class="font-bold text-slate-700">Setup & Đào tạo</h4>
-                        <p class="text-sm text-slate-500">Tháng 4: Lắp đặt thiết bị, cải tạo không gian và đào tạo quy trình vận hành cho đội ngũ nhân sự.</p>
+                    <div class="flex-1 pl-12 pt-4 md:pt-0">
+                        <h4 class="font-bold text-slate-700 text-lg">Soft Opening</h4>
+                        <p class="text-sm text-slate-500 mt-1">Triển khai chiến dịch Marketing (132.5tr) và bắt đầu đón khách tại các CLB mục tiêu.</p>
                     </div>
                 </div>
             </div>
         </div>
     </main>
 
-    <!-- Footer -->
-    <footer class="bg-slate-900 text-slate-400 py-12 px-6 mt-12 border-t border-slate-800">
-        <div class="max-w-6xl mx-auto flex flex-col md:flex-row justify-between items-center text-sm">
-            <div class="mb-4 md:mb-0">
-                <p class="font-bold text-white mb-1">Dự án Vật lý trị liệu Cali 2024</p>
-                <p>Nền tảng phục hồi & chăm sóc sức khỏe chủ động.</p>
-            </div>
-            <div class="flex gap-6">
-                <span>Update: 17/03</span>
-                <span>Version: 2.1.0</span>
-                <span>Author: Project Team</span>
-            </div>
-        </div>
-    </footer>
-
     <script>
         function switchTab(tab) {
             const tabs = ['services', 'business', 'timeline'];
-            const buttons = {
-                services: document.getElementById('btn-services'),
-                business: document.getElementById('btn-business'),
-                timeline: document.getElementById('btn-timeline')
-            };
-            
             tabs.forEach(t => {
-                const content = document.getElementById('tab-' + t);
-                const btn = buttons[t];
-                
-                if (t === tab) {
-                    content.classList.remove('hidden');
-                    btn.classList.add('tab-active');
-                    btn.classList.remove('text-slate-500');
-                    if (t === 'timeline') btn.classList.remove('border-transparent');
-                } else {
-                    content.classList.add('hidden');
-                    btn.classList.remove('tab-active');
-                    btn.classList.add('text-slate-500');
-                    if (t === 'timeline') btn.classList.add('border-transparent');
-                }
+                document.getElementById('tab-' + t).classList.add('hidden');
+                document.getElementById('btn-' + t).classList.remove('tab-active');
+                document.getElementById('btn-' + t).classList.add('text-slate-500');
             });
+            document.getElementById('tab-' + tab).classList.remove('hidden');
+            document.getElementById('btn-' + tab).classList.add('tab-active');
+            document.getElementById('btn-' + tab).classList.remove('text-slate-500');
         }
     </script>
-
 </body>
 </html>
